@@ -16,8 +16,8 @@
 </head>
 <body>   
     <div class="container-main">
-        <form action="" id="form-center" onsubmit='return provera()' id="forma">   
-            <h1>Kreiraj svoj događaj</h1><br><br>
+        <form action="" id="form-center" onsubmit="return provera()" class="forma" method="POST">   
+            <h1>Kreiraj svoj događaj</h1><br>
             <p id="greska" style="color: red"></p>
             <label for="tip">Tip</label>
             <select class="custom-select custom-select-lg mb-3" name="tip" id="tip">
@@ -44,12 +44,26 @@
                 <label for="trajanje">Trajanje (u minutima)</label>
                 <input type="text" class="form-control" name="trajanje" id="trajanje"><br>
             <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customControlValidation1">
+                <input type="checkbox" class="custom-control-input ketering" id="customControlValidation1">
                 <label class="custom-control-label" for="customControlValidation1">Ketering</label>
             </div>
                 <br>
-                <input type="submit" value="OK">
+                <input type="submit" id="dodaj" value="OK"><br><br>
+                <div id="izlistaj" class='dugme'>POGLEDAJ POZIVNICU</div><br></br>
         </form>
+        <div id='lista' class="shown">
+                <table id='tabela'>
+                    <caption>Događaj</caption>
+                    <tr>
+                        <td>Tip</td>
+                        <td>Mesto</td>
+                        <td>Datum</td>
+                        <td>Broj posetilaca</td>
+                        <td>Trajanje (u minutima)</td>
+                        <td>Ketering</td>
+                    </tr>
+                </table>
+        </div>
     </div>
     <script type="text/javascript" src="js/forma.js"></script>    
 </body>
