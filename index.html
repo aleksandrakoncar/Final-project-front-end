@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+
+
+
+.gallery {
+	background-color: #ffe4a6;
+	width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px; 
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+/*.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+/*}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery__item--6 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+.gallery__item--7 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 9;
+}
+.gallery__item--8 {
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.gallery__item--9 {
+  grid-column-start: 11;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.gallery__item--10 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}*/
+
+.opis{position: absolute;
+    background-color:rgb(243, 245, 247 ,0.5);
+    font-size: 1.5vw;
+    margin: 5px;
+    padding: 4px;
+        }
+    /*#slikaKorpa{width: 1em;
+    height: 1em;}*/
+
+    </style>
+</head>
+<body>
+    <div class="container-main">
+      <h2>KULTURNA DEŠAVANJA U GRADU</h2>
+        <div id="Gallery">
+            <div class="gallery">
+                <button id="s1" class="gallery__item gallery__item--1 btn-main" onclick="location.href='bioskopi.html'" type="button">
+                        <div class=opis>BIOSKOPI</div>
+                        <img src="img/Creative-cinema-elements-backgrounds-vector-material-03.jpg" class="gallery__img">
+                </button>
+                <div>
+                        
+                </div>
+                <button id="s3" class="gallery__item gallery__item--3 btn-main" onclick="location.href='pozorista.html'" type="button">
+                        <div class=opis>POZORIŠTA</div>
+                            <img src="img/multiplex-theatre-interior-500x500.jpg" class="gallery__img">
+                </button>
+                <div>
+                        
+                </div>
+                <div>
+
+                </div>
+                <div>
+                        
+                </div>
+                <button id="s7"class="gallery__item gallery__item--7 btn-main" onclick="location.href='muzeji.html'" type="button">
+                        <div class=opis>MUZEJI</div>
+                            <img src="img/1e517b9b8b674d812c12826cfda9063f.jpg" class="gallery__img">
+                </button>
+                <div>
+                       
+                </div>
+                <button id="s9"class="gallery__item gallery__item--9 btn-main" onclick="location.href='form.html'" type="button">
+                        <div class=opis>KREIRAJ SVOJ DOGAĐAJ</div>
+                            <img src="img/page_blank.png" class="gallery__img">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
