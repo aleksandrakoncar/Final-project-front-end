@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pozorista</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="theatre">
+    <div class="container" id="container1">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between bg-primary1" id="navbar">
+
+                    <!-- Top Navigation Menu -->
+                    <div class="topnav">
+                      <div id="myLinks">
+                        <a href="index.html">Naslovna</a>
+                        <a href="bioskopi.html">Bioskopi</a>
+                        <a href="muzeji.html">Muzeji</a>
+                        <a href="forma.html">Kreiraj svoj događaj</a>
+                      </div>
+                      
+                    </div>
+                  <form class="form-inline my-2 my-lg-0" action='rez_pretrage.html' method="GET">
+                        <input class="form-control mr-sm-2" id = "search" list= "filmovi" type="search" placeholder="Search" aria-label="Search">
+                        <datalist id='filmovi'>
+                          <!--Ovde ce se elementi dodavati dinamicki-->
+                        </datalist>
+                        <button class="btn btn-outline-success my-2 my-sm-0" id = "search-btn" type="submit">Search</button>
+                  </form>           
+              </nav>
+        </header>
+    </div>
+        <section>
+                <div class="container" id="container1">
+                    <div class="row">
+                        <div class="card col-12 col-sm-8 col-lg-8 row2">
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <a href=""><img src="img/IMG_2957-1280x720.jpg" class="d-block w-100" alt="aquaman"></a>
+                                              <div class="card">
+                                                    <div class="card-body">
+                                                        <h6 class="novo">NOVO</h6>
+                                                      <h3><a href="#">Limunacija</a></h3>
+                                                      <p>Budući da stalno opada poverenje u institucije, novi narodni tribuni imaju cilj da narodne želje provedu u izvršnu vlast. </p>
+                                                    </div>
+                                                  </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <a href=""><img src="img/follies-at-the-national-theatre-c-johan-persson-wo-1280x720.jpg" class="d-block w-100" alt="escape-room"></a>
+                                            <div class="card">
+                                                    <div class="card-body">
+                                                            <h6 class="novo">NOVO</h6>
+                                                        <h3><a href="#">Hipnoza jedne ljubavi</a></h3>
+                                                        <p>
+
+                                                          Svake godine u Srbiji nestane jedan manji grad od četrdeset do pedeset hiljada stanovnika. Toliko nas je manje jer odlazimo. </p>
+                                                    </div>
+                                                  </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <a href=""><img src="img/20180303_BKP508.jpg" class="d-block w-100" alt="spiderman"></a>
+                                            <div class="card">
+                                                    <div class="card-body">
+                                                            <h6 class="novo">NOVO</h6>
+                                                        <h3><a href="#">Osama-kasaba u Njujorku</a></h3>
+                                                        <p>Priča o generaciji i krvavom ratu. Neke je poslao direktno u smrt, neke u emigraciju, a neke ostavio ovde da žive suočeni s posledicama tragedije koju su preživeli. </p>
+                                                    </div>
+                                                  </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                         </div>
+                       <div class="card col-12 col-sm-4 col-lg-4 row2">
+                                <div class="list-group">
+                                    <div style="overflow-y: scroll; height:573px;">
+                                        <h5>Repertoar za danas</h5>
+                                        <a href="#" class="list-group-item list-group-item-action">Narodno pozorište u 19.30h – <strong>Toska</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Narodno pozorište u 20.30 – <strong>Nesporazum</strong><span class="badge badge-secondary">Novo</span></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Zvezdara teatar u 19.30 – <strong>Kumovi</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Zvezdara teatar u 20.00 – <strong>Hipnoza jedne ljubavi </strong><span class="badge badge-secondary">Novo</span></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Beogradsko dramsko pozorište u 19.30 – <strong>Limunacija</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Beogradsko dramsko pozorište u 20.30 – <strong>Osama-kasaba u Njujorku</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Pozorište na Terazijama u 19.30 – <strong>Glavo luda</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Pozorište na Terazijama u 20.30 – <strong>Cigani lete u nebo</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Jugoslovensko dramsko pozorište u 20h – <strong>Gospođica</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Jugoslovensko dramsko pozorište u 20:30h – <strong>Mletački trgovac</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Madlenijanum u 19.30h – <strong>Ljubav i moda</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Slavija u 20h – <strong>Jasmin na stranputici</strong><span class="badge badge-secondary">Novo</span></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Pozorište "Boško Buha" u 20h – <strong>Gospođa ministarka</strong></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Akademija 28 u 19.30h – <strong>Državni posao</strong><span class="badge badge-secondary">Novo</span></a>
+                                       
+                                    </div>
+                                 </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="section2">       
+            <div class="container container2" id="container2-t">
+                <h3 class="text-center">Predstave</h3>
+                <div class="row justify-content-center">
+                    <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                            <img src="img/41724937051_3626f717fd_b-500x500.jpg" class="card-img-top" alt="lego">
+                            <div class="card-body">
+                              <h5 class="card-title">Kumovi</h5>
+                              <p class="card-text">Kumovi su neobična priča o prijateljstvu čoveka koji je ostao bez posla sa kerom iz obližnjeg parka koji, takođe, nema posao.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Žanr: <a href="#">komedija</a>, <a href="#">drama</a></li>
+                              <li class="list-group-item">Glumci: Dragan Petrović, Danica Maksimović, Branimir Brstina</li>
+                              <li class="list-group-item">Cena: 1000 dinara</li>
+                            </ul>
+                            <div class="card-body">
+                              <a href="#" class="card-link">REZERVIŠI</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;"> 
+                                <img src="img/static1.squarespace.com.jpg" class="card-img-top" alt="dumpling">
+                                <div class="card-body">
+                                  <h5 class="card-title">Bajka o pozorištu</h5>
+                                  <p class="card-text">Iako naslovljen kao bajka, ovaj komad, na žalost, mnogo više korespondira sa stvarnošću od bajki koje znamo.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Žanr: <a href="#">komedija</a>
+                                  <li class="list-group-item">Glumci: Miki Krstović, Tihomir Stanić, Branislav Zeremski, Vesna Stanković</li>
+                                  <li class="list-group-item">Cena: 1000 dinara</li>
+                                </ul>
+                                <div class="card-body">
+                                  <a href="#" class="card-link">REZERVIŠI</a>
+                                </div>
+                              </div>
+                        <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;"> 
+                            <img src="img/NuffieldSouthampton-500x500.png" class="card-img-top" alt="marry_pop">
+                            <div class="card-body" id="card-body">
+                                <h5 class="card-title">Glavo luda</h5>
+                                <p class="card-text">„Glavo luda“ je priča o članovima rokenrol benda koji prolazi kroz razne faze odrastanja i muzičkog sazrevanja.<br><br></p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Žanr: <a href="#">mjuzikl</a>
+                                <li class="list-group-item">Glumci: Žarko Stepanov, Jelena Trkulja, Milica Janketić, Milan Antonić</li>
+                                <li class="list-group-item">Cena: 1000 dinara</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">REZERVIŠI</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                          <img src="img/MI0002908303.jpg" class="card-img-top" alt="lego">
+                          <div class="card-body">
+                            <h5 class="card-title">Toska</h5>
+                            <p class="card-text">Pu­či­ni­je­va To­ska spa­da me­đu naj­o­mi­lje­ni­je i naj­vi­še iz­vo­đe­ne ope­re uop­šte. Uz­bu­dlji­va rad­nja obez­be­đu­je tra­jan uspeh.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Žanr: <a href="#">opera</a></li>
+                            <li class="list-group-item">Glumci: Suzana Šuvaković Savić, Dušan Plazinić</li>
+                            <li class="list-group-item">Cena: 1000 dinara</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="#" class="card-link">REZERVIŠI</a>
+                          </div>
+                      </div>
+                      <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                        <img src="img/nesporazum.jpg" class="card-img-top" alt="lego">
+                        <div class="card-body">
+                          <h5 class="card-title">Nesporazum</h5>
+                          <p class="card-text">Pitanje starijeg i nadasve dobronamernog kolege „zašto bi danas neko uopšte gledao inscenaciju filozofske drame?“</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Žanr: <a href="#">drama</a></li>
+                          <li class="list-group-item">Glumci: Ljiljana Blagojević, Vanja Ejdus, Marija Vicković</li>
+                          <li class="list-group-item">Cena: 1000 dinara</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">REZERVIŠI</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                      <img src="img/224737_46098001_sq-s.jpg" class="card-img-top" alt="lego">
+                      <div class="card-body">
+                        <h5 class="card-title">Cigani lete u nebo</h5>
+                        <p class="card-text">Mladić koji se zvao Aleksej Maksimović Pješkov imao je dvadeset i četiri godine kada je dospeo u tamnicu.</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Žanr: <a href="#">mjuzikl</a>, <a href="#">drama</a></li>
+                        <li class="list-group-item">Glumci: Ivan Bosiljčić, Milena Vasić, Ljiljana Stjepanović</li>
+                        <li class="list-group-item">Cena: 1000 dinara</li>
+                      </ul>
+                      <div class="card-body">
+                        <a href="#" class="card-link">REZERVIŠI</a>
+                      </div>
+                  </div>
+                  <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                    <img src="img/Gospodjica-8.jpg" class="card-img-top" alt="lego">
+                    <div class="card-body">
+                      <h5 class="card-title">Gospođica</h5>
+                      <p class="card-text">Na maestralan način opisan je život bez ljubavi, prijateljstva i ljudske brige za bližnje, bez srca; život određen jednom jedinom porukom oca na samrti, pogrešno shvaćenom i prenaglašenom.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Žanr: <a href="#">drama</a></li>
+                      <li class="list-group-item">Glumci: Nataša Ninković, Voja Brajović</li>
+                      <li class="list-group-item">Cena: 1000 dinara</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">REZERVIŠI</a>
+                    </div>
+                </div>
+                <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                  <img src="img/william-shakespeare-194895-1-402.jpg" class="card-img-top" alt="lego">
+                  <div class="card-body">
+                    <h5 class="card-title">Mletački trgovac</h5>
+                    <p class="card-text">Basanio moli svog velikog prijatelja, Antonija, da mu pozajmi novac za odlazak u Belmont, prelepoj, mudroj Porciji kod koju želi da načini svojom suprugom.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Žanr: <a href="#">komedija</a>, <a href="#">drama</a></li>
+                    <li class="list-group-item">Glumci: Dragan Mićalović, Irfan Mensur</li>
+                    <li class="list-group-item">Cena: 1000 dinara</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">REZERVIŠI</a>
+                  </div>
+              </div>
+              <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                <img src="img/ljubav i moda.jpg" class="card-img-top" alt="lego">
+                <div class="card-body">
+                  <h5 class="card-title">Ljubav i moda</h5>
+                  <p class="card-text">Priča o entuzijazmu i optimizmu, podsećanje na neke osnovne etičke i emocionalne vrednosti koje su danas uglavnom u drugom planu.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Žanr: <a href="#">mjuzikl</a></li>
+                  <li class="list-group-item">Glumci: Nina Janković, Branislav Tomašević, Nebojša Milovanović</li>
+                  <li class="list-group-item">Cena: 1000 dinara</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">REZERVIŠI</a>
+                </div>
+            </div>
+            <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                <img src="img/Jasmin-na-stranputici-6.jpg" class="card-img-top" alt="lego">
+                <div class="card-body">
+                  <h5 class="card-title">Jasmin na stranputici</h5>
+                        <p class="card-text">Jasmin… lik koji traži spas od rata i strahota kojima nije pripadao, koje ničim nije izazvao, ali čiji ga odjek prati u stopu.</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Žanr: <a href="#">drama</a></li>
+                        <li class="list-group-item">Glumci: Ivan Bosiljčić, Ljiljana Lašić, Rada Đuričin</li>
+                        <li class="list-group-item">Cena: 1000 dinara</li>
+                      </ul>
+                      <div class="card-body">
+                        <a href="#" class="card-link">REZERVIŠI</a>
+                      </div>
+                  </div>
+            <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                <img src="img/588087_gospodja-ministarka-bosko-buha-uzice_sq-s.jpg" class="card-img-top" alt="lego">
+                <div class="card-body">
+                  <h5 class="card-title">Gospođa ministarka</h5>
+                  <p class="card-text">“Gospođa ministarka” – zamišljena kao arhetip, komična maska, stanje svesti, deformacija koja nema pol, travestija.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Žanr: <a href="#">komedija</a></li>
+                  <li class="list-group-item">Glumci: Goran Jevtić, Miloš Vlalukin, Uroš Jovčić</li>
+                  <li class="list-group-item">Cena: 1000 dinara</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">REZERVIŠI</a>
+                </div>
+            </div>
+            <div class="card col-12 col-sm-6 col-lg-4" style="width: 15rem;">
+                <img src="img/artworks-000051258931-ngiagh-t500x500.jpg" class="card-img-top" alt="lego">
+                <div class="card-body">
+                  <h5 class="card-title">Državni posao</h5>
+                  <p class="card-text">Predstavlja radni dan i razmišljanja trojice zaposlenih o dnevnim događanjima u preduzeću, ali i o životu i društvu uopšte.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Žanr: <a href="#">mjuzikl</a></li>
+                  <li class="list-group-item">Glumci: Dimitrije Banjac, Nikola Škorić, Dejan Ćirjaković</li>
+                  <li class="list-group-item">Cena: 1000 dinara</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">REZERVIŠI</a>
+                </div>
+            </div>
+                      
+                        <nav aria-label="Page navigation example">
+                                <ul class="pagination" id="pagination">
+                                  <li id="previous-page" class="page-item">
+                                    <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                  </li>
+                                  
+                                </ul>
+                              </nav>
+                </div>
+            </div>
+                                
+        </section>
+        <div class="container" id="container3">
+           <footer class="bg-primary text-white bg-primary1">
+                <div class="container d-flex justify-content-between">
+                  <small>
+                      <ul id="lista1">
+                            <h6>Kontakt</h6>
+                        <li>Telefon: +3819767553</li>
+                        <li>Adresa: Filmska 17</li>
+                        <li>email: bioskop@film.rs</li>
+                      </ul>
+                    </small>
+                        <small>
+                            <ul id="lista1">
+                              <h6>Pratite nas</h6>
+                              <li><a href = "https://www.facebook.com/">Facebook</a></li>
+                              <li><a href = "https://twitter.com/?lang=en">Twitter</li></a>
+                              <li><a href = "https://www.youtube.com/">Youtube</li></a>
+                            </ul>
+                          </small>
+                      </div>
+            </footer> 
+        </div>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "inline-block";
+  }
+}
+  var filmovi = {
+    prvi: "Lego film 2",
+    drugi: "Knedlica",
+    treci: "Povratak Meri Popins"
+  };
+
+  var json_filmovi = JSON.stringify(filmovi);
+  console.log(json_filmovi);
+
+  localStorage.setItem("movies", json_filmovi);
+  document.getElementById("search").addEventListener("input", function() {
+    var options = localStorage.getItem("movies");
+    options_parsed = JSON.parse(options);
+    var lista = document.getElementById('filmovi');
+    for(option in options_parsed){                
+                opcija += '<option value= ' + option + ' >'; 
+            }
+            lista.innerHTML = opcija;
+        });
+    document.getElementById('search-btn').addEventListener('click', function(){
+        var grad = document.getElementById('search').value;
+        localStorage.setItem('film', film);
+        window.open('rez_pretrage.html');
+    });
+</script>
+<script type="text/javascript" src="js/pagination.js"></script>  
+</body>
+</html>
